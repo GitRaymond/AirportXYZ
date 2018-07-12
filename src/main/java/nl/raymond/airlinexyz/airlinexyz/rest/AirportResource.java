@@ -2,6 +2,7 @@ package nl.raymond.airlinexyz.airlinexyz.rest;
 
 import nl.raymond.airlinexyz.airlinexyz.domain.Airport;
 import nl.raymond.airlinexyz.airlinexyz.service.AirportService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class AirportResource {
 
+    @Autowired
     private AirportService airportService;
 
     @PostMapping("/airports")

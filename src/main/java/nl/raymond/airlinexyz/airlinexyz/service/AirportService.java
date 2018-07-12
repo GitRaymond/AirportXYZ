@@ -18,6 +18,7 @@ public class AirportService {
     @Autowired
     private AirportRepository airportRepository;
 
+    @Autowired
     private FleetRepository fleetRepository;
 
     public Airport save(Airport fleet) {

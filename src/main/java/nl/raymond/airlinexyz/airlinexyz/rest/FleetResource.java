@@ -16,8 +16,10 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class FleetResource {
 
+    @Autowired
     private FleetService fleetService;
 
+    @Autowired
     private AirportService airportService;
 
     @PostMapping("/airports/{id}/fleets")
@@ -72,7 +74,7 @@ public class FleetResource {
         }
     }
 
-    @GetMapping("/airport/{id}/fleets")
+    @GetMapping("/airports/{id}/fleets")
     public ResponseEntity<List<Fleet>> getAllFleetsByAirport(@PathVariable Long id) {
 
         Optional<Airport> airport = airportService.findOne(id);
@@ -82,6 +84,7 @@ public class FleetResource {
                     fleetService.findAllByAirport(airport.get().getId()),
                     HttpStatus.OK);
         } else {
+            System.out.println("test");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
