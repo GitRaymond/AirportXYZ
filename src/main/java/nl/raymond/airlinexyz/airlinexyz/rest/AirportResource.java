@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-public class AirportRestController {
+public class AirportResource {
 
     private AirportService airportService;
 

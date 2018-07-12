@@ -32,4 +32,8 @@ public class FleetService {
     public void delete(Long id) {
         fleetRepository.deleteById(id);
     }
+
+    public List<Fleet> findAllByAirport(Long id) {
+        return fleetRepository.findByAirportId(id);
+    }
 }
