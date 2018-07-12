@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 @Entity
-public class Fleet {
+public class Fleet extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
