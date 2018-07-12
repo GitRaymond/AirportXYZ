@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-public class Airport {
+public class Airport extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
